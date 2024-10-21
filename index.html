@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="product_value"></p>
+<button onclick="myFunction()">TRY IT</button>
+<p id="answer"></p>
+    <p id="result"></p>
+    <button onclick="ascending()">ASCENDING</button>
+    <button onclick="descending()">DESCENDING</button>
+    <script>
+        function ascending() {
+            var data1 = [2, 3, 5, 7, 9, 17, 22]
+            data1.sort(function (a, b) { return (a - b) })
+            document.getElementById("result").innerHTML = data1
+        }
+        function descending() {
+            var data1 = [2, 3, 5, 7, 9, 17, 22]
+            data1.sort(function (a, b) { return (b - a) })
+            document.getElementById("result").innerHTML = data1
+        }
+        function myFunction() {
+    var x=10;
+    var y=20;
+    var a=eval("x + y")+"<br>";
+    var b=eval("2 * 2 ")+"<br>";
+    var c=eval(" y - x")+"<br>";
+    var res=a + b + c;
+    document.getElementById("answer").innerHTML=res;
+}
+    var numbers = [10, 15, 24, 27, 36, 39, 40];
+    function myfunction(num) {
+        return num * 10;
+    }
+    var newarray = numbers.map(myfunction)
+    document.getElementById("product_value").innerHTML = newarray;
+    </script>
+</body>
+
+</html>
